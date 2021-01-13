@@ -27,5 +27,11 @@ const groceryReducer = (state = initialState, action) => {
 }
 
 const store = createStore(groceryReducer);
+
+// Testing
+store.dispatch(addGrocery("Milk"));
+store.dispatch(addGrocery("Water"));
+store.dispatch(addGrocery("Eggs"));
+
 export default store;
 

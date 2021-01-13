@@ -12,7 +12,7 @@ class AddGrocery extends Component {
   handleEnter(evt) {
     if(evt.key === "Enter") {
       console.log("KKK+> ", this.state.input)
-      this.props.add(this.state.input);
+      // this.props.add(this.state.input);
       this.setState({ input: "" });
     }
   }
