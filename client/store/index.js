@@ -4,7 +4,8 @@ import loggerMiddleware from "redux-logger";
 import groceryReducer, { addGrocery } from "./grocery-store";
 
 const store = createStore(
-  groceryReducer, applyMiddleware(loggerMiddleware)
+  groceryReducer,
+  applyMiddleware(loggerMiddleware)
 );
 
 // Testing
