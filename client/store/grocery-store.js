@@ -1,5 +1,6 @@
 const ADD_GROCERY = "ADD_GROCERY";
 const TOGGLE_ITEM = "TOGGLE_ITEM";
+const REMOVE_ITEM = "REMOVE_ITEM";
 
 let nextId = 0;
 export const addGrocery = text => ({
@@ -10,6 +11,11 @@ export const addGrocery = text => ({
 
 export const toggleItem = id => ({
   type: TOGGLE_ITEM,
+  id
+});
+
+export const removeItem = id => ({
+  type: REMOVE_ITEM,
   id
 });
 
@@ -25,11 +31,14 @@ const groceryReducer = (state = initialState, action) => {
       };
       return { ...state, groceries: [...state.groceries, newGrocery] };
     case TOGGLE_ITEM:
-      const groceries = state.groceries.map(g => {
+      const toggled = state.groceries.map(g => {
         if(g.id === action.id) g.bought = !g.bought;
         return g;
       })
-      return { ...state, groceries }
+      return { ...state, groceries: toggled };
+    case REMOVE_ITEM:
+      const filtered = state.groceries.filter(g => g.id !== action.id);
+      return { ...state, groceries: filtered };
     default:
       return state;
   }

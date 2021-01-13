@@ -2,9 +2,9 @@ html {
   height: 100%;
 }
 body {
-  background: linear-gradient(to bottom, #69a7c6 0%,#cd82f2 100%);
+  background: linear-gradient(to bottom, #69a7c6 0%, #cd82f2 100%);
   height: 100%;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 ul {
@@ -12,8 +12,16 @@ ul {
 }
 
 li {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 5px;
+}
+li:hover {
+  font-size: 24px;
+  color: rgb(77, 77, 77);
+}
+
+.li-group {
+  display: flex;
 }
 
 .app {
@@ -33,7 +41,7 @@ li {
   display: flex;
 }
 
-.add-grocery input[type=text] {
+.add-grocery input[type='text'] {
   flex-grow: 1;
   font-size: 16px;
   padding: 10px;
@@ -43,5 +51,26 @@ li {
 
 .add-grocery button {
   border-radius: 0 8px 8px 0;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 1px 20px;
+}
+.add-grocery button:hover {
+  background-color: rgb(104, 102, 102);
+  color: white;
+  font-weight: bolder;
 }
 
+.btn-remove {
+  margin-left: auto;
+  color: white;
+  background: red;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+}
+.btn-remove:hover {
+  background-color: rgb(131, 84, 92);
+  font-size: 17px;
+  border: none;
+}

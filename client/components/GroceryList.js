@@ -1,19 +1,25 @@
 import React from "react";
 import { connect } from "react-redux";
 import GroceryItem from "./GroceryItem";
-import { toggleItem } from "../store/grocery-store";
+import { toggleItem, removeItem } from "../store/grocery-store";
 
 const ListComponent = props => (
   <ul>
     {props.groceries.map(grocery => (
-      <GroceryItem key={grocery.id} {...grocery} onClick={props.onClick} />
+      <GroceryItem
+        key={grocery.id}
+        {...grocery}
+        toggle={props.toggle}
+        remove={props.remove}
+      />
     ))}
   </ul>
 );
 
 const mapState = state => ({ groceries: state.groceries });
 const mapDispatch = dispatch => ({
-  onClick : id => dispatch(toggleItem(id))
+  toggle: id => dispatch(toggleItem(id)),
+  remove: id => dispatch(removeItem(id))
 });
 
 const GroceryList = connect(mapState, mapDispatch)(ListComponent);

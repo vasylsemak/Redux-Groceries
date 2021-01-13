@@ -33,7 +33,7 @@ class AddGroceryComp extends Component {
           onChange={evt => this.setState({ input: evt.target.value })}
           onKeyDown={this.handleEnter}
         />
-        <button onClick={this.handleClick}>Add Grocery</button>
+        <button onClick={this.handleClick}>ADD</button>
       </div>
     )
   }
