@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-import { createStore } from "redux";
-
 const ADD_GROCERY = "ADD_GROCERY";
 
 let nextId = 0;
@@ -26,12 +23,4 @@ const groceryReducer = (state = initialState, action) => {
   }
 }
 
-const store = createStore(groceryReducer);
-
-// Testing
-store.dispatch(addGrocery("Milk"));
-store.dispatch(addGrocery("Water"));
-store.dispatch(addGrocery("Eggs"));
-
-export default store;
-
+export default groceryReducer;
