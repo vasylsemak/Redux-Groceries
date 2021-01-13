@@ -12,7 +12,7 @@ const App = () => (
       <img src="groceries.png" alt="Groceries" width="500" />
       <div className="list">
         <Route path="/" component={AddGrocery} />
-        <Route path="/" render={(props) => <GroceryList groceries={groceries}/>}  />
+        <Route path="/" render={() => <GroceryList groceries={groceries}/>}  />
         <Route path="/" component={Footer} />
       </div>
     </div>
