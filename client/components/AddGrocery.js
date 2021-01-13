@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { addGrocery } from "../store";
 
-class AddGrocery extends Component {
+class AddGroceryComp extends Component {
   constructor() {
     super();
     this.state = { input: "" };
@@ -11,8 +13,7 @@ class AddGrocery extends Component {
 
   handleEnter(evt) {
     if(evt.key === "Enter") {
-      console.log("KKK+> ", this.state.input)
-      // this.props.add(this.state.input);
+      this.props.add(this.state.input);
       this.setState({ input: "" });
     }
   }
@@ -38,4 +39,9 @@ class AddGrocery extends Component {
   }
 };
 
+const mapDispatchToProps = dispatch => ({
+  add: (text) => dispatch(addGrocery(text))
+});
+
+const AddGrocery = connect(null, mapDispatchToProps)(AddGroceryComp);
 export default AddGrocery;

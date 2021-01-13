@@ -4,7 +4,7 @@ import { createStore } from "redux";
 const ADD_GROCERY = "ADD_GROCERY";
 
 let nextId = 0;
-const addGrocery = text => ({
+export const addGrocery = text => ({
   type: ADD_GROCERY,
   id: nextId++,
   text
