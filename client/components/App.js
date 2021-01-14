@@ -4,8 +4,6 @@ import AddGrocery from "./AddGrocery";
 import GroceryList from "./GroceryList";
 import Footer from "./Footer";
 
-const groceries = [{ id: 1, text: "Milk", bought: false }];
-
 const App = () => (
   <Router>
     <div className="app">

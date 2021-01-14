@@ -4,10 +4,9 @@ import GroceryItem from "./GroceryItem";
 import { toggleItem, removeItem, SHOW_BOUGHT, SHOW_ACTIVE } from "../store/grocery-store";
 
 const ListComponent = props => {
-  let groceries = props.groceries;
-  const { toggle, remove, filter } = props;
+  let { groceries, filter } = props;
 
-  groceries = filter === SHOW_BOUGHT
+  groceries = (filter === SHOW_BOUGHT)
     ? groceries.filter(g => g.bought === true)
     : (filter === SHOW_ACTIVE)
       ? groceries.filter(g => g.bought === false)
@@ -16,12 +15,7 @@ const ListComponent = props => {
   return (
     <ul>
       {groceries.map(grocery => (
-        <GroceryItem
-          key={grocery.id}
-          {...grocery}
-          toggle={props.toggle}
-          remove={props.remove}
-        />
+        <GroceryItem key={grocery.id} groceryItem={grocery} {...props} />
       ))}
     </ul>
   )

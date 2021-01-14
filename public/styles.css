@@ -22,6 +22,7 @@ li:hover {
 
 .li-group {
   display: flex;
+  justify-content: space-between;
   padding-right: 20px;
 }
 
@@ -36,6 +37,16 @@ li:hover {
   border-radius: 10px;
   width: 75%;
   padding: 10px 10px 20px 10px;
+}
+
+.quantity {
+  margin-right: 15px;
+}
+
+.quantity-label {
+  color: grey;
+  font-weight: light;
+  font-size: 0.9rem;
 }
 
 .add-grocery {

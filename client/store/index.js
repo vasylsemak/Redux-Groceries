@@ -1,14 +1,12 @@
-/* eslint-disable no-unused-vars */
-import { createStore, applyMiddleware } from "redux";
-import loggerMiddleware from "redux-logger";
+import { createStore } from "redux";
 import groceryReducer, { addGrocery } from "./grocery-store";
 
 const store = createStore(
   groceryReducer,
-  applyMiddleware(loggerMiddleware)
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-// Testing
+// Hardcoded items
 store.dispatch(addGrocery("Milk"));
 store.dispatch(addGrocery("Water"));
 store.dispatch(addGrocery("Eggs"));
