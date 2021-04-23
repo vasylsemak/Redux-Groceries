@@ -2,6 +2,8 @@
 
 ## Utilizing Redux State Managment for React App
 
+<img alt="screenshot" src="public/photo.png/" width="650">
+
 ## Setup
 
 ### MacOS/Linux
