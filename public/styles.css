@@ -32,11 +32,16 @@ li:hover {
   flex-direction: column;
 }
 
+.app img {
+  margin-top: 5rem;
+}
+
 .list {
   background-color: #fff;
   border-radius: 10px;
   width: 75%;
   padding: 10px 10px 20px 10px;
+  margin-top: 5rem;
 }
 
 .quantity {
@@ -61,13 +66,15 @@ li:hover {
   border-radius: 8px 0 0 8px;
 }
 
-.add-grocery button {
+.add-grocery button,
+.footer button {
   border-radius: 0 8px 8px 0;
   font-size: 18px;
   font-weight: bold;
   padding: 1px 20px;
 }
-.add-grocery button:hover {
+.add-grocery button:hover,
+.footer button:hover {
   background-color: rgb(104, 102, 102);
   color: white;
   font-weight: bolder;
@@ -85,4 +92,10 @@ li:hover {
   background-color: rgb(131, 84, 92);
   font-size: 17px;
   border: none;
+}
+
+.footer button {
+  border-radius: 6px;
+  margin-right: 0.7rem;
+  color: #0f4979;
 }
